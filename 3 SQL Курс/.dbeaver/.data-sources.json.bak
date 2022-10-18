@@ -1,0 +1,56 @@
+{
+	"folders": {},
+	"connections": {
+		"mysql8-183846e21f9-496f5d205a1907f2": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "localhost",
+			"save-password": true,
+			"read-only": false,
+			"virtual-model-id": "mysql8-182e9e857e7-68a10edf23b54ea1",
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "mysql",
+				"url": "jdbc:mysql://localhost:3306/mysql",
+				"home": "/usr/local/mysql-8.0.30-macos12-arm64",
+				"type": "dev",
+				"properties": {
+					"connectTimeout": "20000",
+					"rewriteBatchedStatements": "true",
+					"enabledTLSProtocols": "TLSv1,TLSv1.1,TLSv1.2"
+				},
+				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {
+		"mysql8-182e9e857e7-68a10edf23b54ea1": {
+			"vk": {
+				"@properties": {
+					"erd.diagram.state": {
+						"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202208301837\"><entities><data-source id=\"mysql8-182e9e857e7-68a10edf23b54ea1\"><entity id=\"1\" name=\"chat_settings\" fq-name=\"vk.chat_settings\" order=\"0\" x=\"691\" y=\"36\"><path name=\"vk\"/></entity><entity id=\"2\" name=\"chats\" fq-name=\"vk.chats\" order=\"1\" x=\"413\" y=\"25\"><path name=\"vk\"/></entity><entity id=\"3\" name=\"communities\" fq-name=\"vk.communities\" order=\"2\" x=\"376\" y=\"666\"><path name=\"vk\"/></entity><entity id=\"4\" name=\"friend_requests\" fq-name=\"vk.friend_requests\" order=\"3\" x=\"493\" y=\"277\"><path name=\"vk\"/></entity><entity id=\"5\" name=\"likes\" fq-name=\"vk.likes\" order=\"4\" x=\"53\" y=\"175\"><path name=\"vk\"/></entity><entity id=\"6\" name=\"media\" fq-name=\"vk.media\" order=\"5\" x=\"302\" y=\"145\"><path name=\"vk\"/></entity><entity id=\"7\" name=\"media_types\" fq-name=\"vk.media_types\" order=\"6\" x=\"551\" y=\"137\"><path name=\"vk\"/></entity><entity id=\"8\" name=\"messages\" fq-name=\"vk.messages\" order=\"7\" x=\"518\" y=\"574\"><path name=\"vk\"/></entity><entity id=\"9\" name=\"photo_albums\" fq-name=\"vk.photo_albums\" order=\"8\" x=\"556\" y=\"450\"><path name=\"vk\"/></entity><entity id=\"10\" name=\"photos\" fq-name=\"vk.photos\" order=\"9\" x=\"68\" y=\"393\"><path name=\"vk\"/></entity><entity id=\"11\" name=\"profiles\" fq-name=\"vk.profiles\" order=\"10\" x=\"48\" y=\"558\"><path name=\"vk\"/></entity><entity id=\"12\" name=\"users\" fq-name=\"vk.users\" order=\"11\" x=\"240\" y=\"405\"><path name=\"vk\"/></entity><entity id=\"13\" name=\"users_chats\" fq-name=\"vk.users_chats\" order=\"12\" x=\"201\" y=\"39\"><path name=\"vk\"/></entity><entity id=\"14\" name=\"users_communities\" fq-name=\"vk.users_communities\" order=\"13\" x=\"185\" y=\"778\"><path name=\"vk\"/></entity></data-source></entities><relations><relation name=\"chat_settings_ibfk_1\" fq-name=\"vk.chat_settings.chat_settings_ibfk_1\" type=\"fk\" pk-ref=\"2\" fk-ref=\"1\"/><relation name=\"messages_ibfk_2\" fq-name=\"vk.messages.messages_ibfk_2\" type=\"fk\" pk-ref=\"2\" fk-ref=\"8\"/><relation name=\"users_chats_ibfk_2\" fq-name=\"vk.users_chats.users_chats_ibfk_2\" type=\"fk\" pk-ref=\"2\" fk-ref=\"13\"/><relation name=\"chats_ibfk_1\" fq-name=\"vk.chats.chats_ibfk_1\" type=\"fk\" pk-ref=\"3\" fk-ref=\"2\"/><relation name=\"users_communities_ibfk_2\" fq-name=\"vk.users_communities.users_communities_ibfk_2\" type=\"fk\" pk-ref=\"3\" fk-ref=\"14\"/><relation name=\"chat_settings_ibfk_3\" fq-name=\"vk.chat_settings.chat_settings_ibfk_3\" type=\"fk\" pk-ref=\"6\" fk-ref=\"1\"/><relation name=\"likes_ibfk_2\" fq-name=\"vk.likes.likes_ibfk_2\" type=\"fk\" pk-ref=\"6\" fk-ref=\"5\"/><relation name=\"photos_ibfk_2\" fq-name=\"vk.photos.photos_ibfk_2\" type=\"fk\" pk-ref=\"6\" fk-ref=\"10\"/><relation name=\"media_ibfk_2\" fq-name=\"vk.media.media_ibfk_2\" type=\"fk\" pk-ref=\"7\" fk-ref=\"6\"/><relation name=\"photos_ibfk_1\" fq-name=\"vk.photos.photos_ibfk_1\" type=\"fk\" pk-ref=\"9\" fk-ref=\"10\"/><relation name=\"fk_photo_id\" fq-name=\"vk.profiles.fk_photo_id\" type=\"fk\" pk-ref=\"10\" fk-ref=\"11\"/><relation name=\"chat_settings_ibfk_2\" fq-name=\"vk.chat_settings.chat_settings_ibfk_2\" type=\"fk\" pk-ref=\"12\" fk-ref=\"1\"/><relation name=\"communities_ibfk_1\" fq-name=\"vk.communities.communities_ibfk_1\" type=\"fk\" pk-ref=\"12\" fk-ref=\"3\"/><relation name=\"friend_requests_ibfk_1\" fq-name=\"vk.friend_requests.friend_requests_ibfk_1\" type=\"fk\" pk-ref=\"12\" fk-ref=\"4\"/><relation name=\"friend_requests_ibfk_2\" fq-name=\"vk.friend_requests.friend_requests_ibfk_2\" type=\"fk\" pk-ref=\"12\" fk-ref=\"4\"/><relation name=\"likes_ibfk_1\" fq-name=\"vk.likes.likes_ibfk_1\" type=\"fk\" pk-ref=\"12\" fk-ref=\"5\"/><relation name=\"media_ibfk_1\" fq-name=\"vk.media.media_ibfk_1\" type=\"fk\" pk-ref=\"12\" fk-ref=\"6\"/><relation name=\"messages_ibfk_1\" fq-name=\"vk.messages.messages_ibfk_1\" type=\"fk\" pk-ref=\"12\" fk-ref=\"8\"/><relation name=\"photo_albums_ibfk_1\" fq-name=\"vk.photo_albums.photo_albums_ibfk_1\" type=\"fk\" pk-ref=\"12\" fk-ref=\"9\"/><relation name=\"fk_user_id\" fq-name=\"vk.profiles.fk_user_id\" type=\"fk\" pk-ref=\"12\" fk-ref=\"11\"><bend type=\"abs\" x=\"160\" y=\"713\"/><bend type=\"abs\" x=\"347\" y=\"713\"/></relation><relation name=\"users_chats_ibfk_1\" fq-name=\"vk.users_chats.users_chats_ibfk_1\" type=\"fk\" pk-ref=\"12\" fk-ref=\"13\"/><relation name=\"users_communities_ibfk_1\" fq-name=\"vk.users_communities.users_communities_ibfk_1\" type=\"fk\" pk-ref=\"12\" fk-ref=\"14\"/></relations></diagram>"
+					}
+				}
+			},
+			"money": {
+				"@properties": {
+					"erd.diagram.state": {
+						"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202209132222\"><entities><data-source id=\"mysql8-182e9e857e7-68a10edf23b54ea1\"><entity id=\"1\" name=\"account_types\" fq-name=\"money.account_types\" order=\"0\" x=\"153\" y=\"20\"><path name=\"money\"/></entity><entity id=\"2\" name=\"accounts\" fq-name=\"money.accounts\" order=\"1\" x=\"430\" y=\"18\"><path name=\"money\"/></entity><entity id=\"3\" name=\"banks\" fq-name=\"money.banks\" order=\"2\" x=\"115\" y=\"134\"><path name=\"money\"/></entity><entity id=\"4\" name=\"categories\" fq-name=\"money.categories\" order=\"3\" x=\"556\" y=\"379\"><path name=\"money\"/></entity><entity id=\"5\" name=\"currencies\" fq-name=\"money.currencies\" order=\"4\" x=\"133\" y=\"290\"><path name=\"money\"/></entity><entity id=\"6\" name=\"currencies_courses\" fq-name=\"money.currencies_courses\" order=\"5\" x=\"115\" y=\"421\"><path name=\"money\"/></entity><entity id=\"7\" name=\"permitions\" fq-name=\"money.permitions\" order=\"6\" x=\"620\" y=\"272\"><path name=\"money\"/></entity><entity id=\"8\" name=\"transactions\" fq-name=\"money.transactions\" order=\"7\" x=\"341\" y=\"369\"><path name=\"money\"/></entity><entity id=\"9\" name=\"user_profiles\" fq-name=\"money.user_profiles\" order=\"8\" x=\"842\" y=\"62\"><path name=\"money\"/></entity><entity id=\"10\" name=\"users\" fq-name=\"money.users\" order=\"9\" x=\"655\" y=\"46\"><path name=\"money\"/></entity></data-source></entities><relations><relation name=\"accounts_ibfk_4\" fq-name=\"money.accounts.accounts_ibfk_4\" type=\"fk\" pk-ref=\"1\" fk-ref=\"2\"/><relation name=\"permitions_ibfk_1\" fq-name=\"money.permitions.permitions_ibfk_1\" type=\"fk\" pk-ref=\"2\" fk-ref=\"7\"/><relation name=\"transactions_ibfk_1\" fq-name=\"money.transactions.transactions_ibfk_1\" type=\"fk\" pk-ref=\"2\" fk-ref=\"8\"/><relation name=\"transactions_ibfk_2\" fq-name=\"money.transactions.transactions_ibfk_2\" type=\"fk\" pk-ref=\"2\" fk-ref=\"8\"/><relation name=\"accounts_ibfk_2\" fq-name=\"money.accounts.accounts_ibfk_2\" type=\"fk\" pk-ref=\"3\" fk-ref=\"2\"/><relation name=\"categories_ibfk_1\" fq-name=\"money.categories.categories_ibfk_1\" type=\"fk\" pk-ref=\"4\" fk-ref=\"4\"><bend type=\"rel\" x=\"691\" y=\"509\"/><bend type=\"rel\" x=\"610\" y=\"542\"/></relation><relation name=\"transactions_ibfk_3\" fq-name=\"money.transactions.transactions_ibfk_3\" type=\"fk\" pk-ref=\"4\" fk-ref=\"8\"/><relation name=\"accounts_ibfk_3\" fq-name=\"money.accounts.accounts_ibfk_3\" type=\"fk\" pk-ref=\"5\" fk-ref=\"2\"/><relation name=\"currencies_courses_ibfk_1\" fq-name=\"money.currencies_courses.currencies_courses_ibfk_1\" type=\"fk\" pk-ref=\"5\" fk-ref=\"6\"/><relation name=\"accounts_ibfk_1\" fq-name=\"money.accounts.accounts_ibfk_1\" type=\"fk\" pk-ref=\"10\" fk-ref=\"2\"/><relation name=\"permitions_ibfk_2\" fq-name=\"money.permitions.permitions_ibfk_2\" type=\"fk\" pk-ref=\"10\" fk-ref=\"7\"/><relation name=\"user_profiles_ibfk_1\" fq-name=\"money.user_profiles.user_profiles_ibfk_1\" type=\"fk\" pk-ref=\"10\" fk-ref=\"9\"/></relations></diagram>"
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Разработка",
+			"color": "255,255,255",
+			"description": "База данных для разработки",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
